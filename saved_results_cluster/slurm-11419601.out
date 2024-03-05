@@ -1,0 +1,1114 @@
+Case network_size=10, connection_strength=0.1, density=3:
+----------------------------------------------------------------------------------------------------
+System parameters: 
+ [1.25, 2.4, 1.96, 1.7, 0.81, 0.81, 0.62, 2.23, 1.7, 1.92]
+Interconnection matrix: 
+ [[ 0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00 -0.04  0.00]
+ [ 0.00  0.00  0.00  0.00  0.00  0.02  0.00  0.00 -0.08  0.00]
+ [ 0.00 -0.01  0.00  0.00  0.00  0.00  0.00  0.00  0.00 -0.10]
+ [ 0.00  0.00 -0.05  0.00  0.00  0.00  0.00  0.00 -0.05  0.00]
+ [ 0.00  0.00  0.00  0.00  0.00  0.00 -0.01  0.00  0.00  0.05]
+ [-0.01  0.00  0.00  0.00  0.00  0.00  0.00 -0.02  0.00  0.00]
+ [ 0.00  0.00  0.05  0.00  0.07  0.00  0.00  0.00  0.00  0.00]
+ [ 0.00  0.00 -0.07  0.00  0.00  0.00 -0.04  0.00  0.00  0.00]
+ [ 0.00 -0.06  0.00  0.00  0.00  0.04  0.00  0.00  0.00  0.00]
+ [ 0.00  0.00  0.00  0.08  0.00  0.00  0.00  0.07  0.00  0.00]]
+--------------------------------------------------
+Verifying stability and ROA using quadratic Lyapunov functions...
+Processing subsystem 1...
+Processing subsystem 2...
+Processing subsystem 3...
+Processing subsystem 4...
+Processing subsystem 5...
+Processing subsystem 6...
+Processing subsystem 7...
+Processing subsystem 8...
+Processing subsystem 9...
+Processing subsystem 10...
+Time taken for verifying stability and ROA using quadratic Lyapunov functions: 4.341250896453857 seconds.
+
+--------------------------------------------------
+Training neural Lyapunov functions for subsystems...
+Processing subsystem 1...
+Data exists. Loading training data...
+Model exists. Loading model...
+Model loaded: results/van_der_pol_system_1_mu_1.25_3000_samples_N=300000_epoch=20_layer_2_width_20_lr_0.001.pt
+Processing subsystem 2...
+Data exists. Loading training data...
+Model exists. Loading model...
+Model loaded: results/van_der_pol_system_2_mu_2.4_3000_samples_N=300000_epoch=20_layer_2_width_20_lr_0.001.pt
+Processing subsystem 3...
+Data exists. Loading training data...
+Model exists. Loading model...
+Model loaded: results/van_der_pol_system_3_mu_1.96_3000_samples_N=300000_epoch=20_layer_2_width_20_lr_0.001.pt
+Processing subsystem 4...
+Data exists. Loading training data...
+Model exists. Loading model...
+Model loaded: results/van_der_pol_system_4_mu_1.7_3000_samples_N=300000_epoch=20_layer_2_width_20_lr_0.001.pt
+Processing subsystem 5...
+Data exists. Loading training data...
+Model exists. Loading model...
+Model loaded: results/van_der_pol_system_5_mu_0.81_3000_samples_N=300000_epoch=20_layer_2_width_20_lr_0.001.pt
+Processing subsystem 6...
+Data exists. Loading training data...
+Model exists. Loading model...
+Model loaded: results/van_der_pol_system_6_mu_0.81_3000_samples_N=300000_epoch=20_layer_2_width_20_lr_0.001.pt
+Processing subsystem 7...
+Data exists. Loading training data...
+Model exists. Loading model...
+Model loaded: results/van_der_pol_system_7_mu_0.62_3000_samples_N=300000_epoch=20_layer_2_width_20_lr_0.001.pt
+Processing subsystem 8...
+Data exists. Loading training data...
+Model exists. Loading model...
+Model loaded: results/van_der_pol_system_8_mu_2.23_3000_samples_N=300000_epoch=20_layer_2_width_20_lr_0.001.pt
+Processing subsystem 9...
+Data exists. Loading training data...
+Model exists. Loading model...
+Model loaded: results/van_der_pol_system_9_mu_1.7_3000_samples_N=300000_epoch=20_layer_2_width_20_lr_0.001.pt
+Processing subsystem 10...
+Data exists. Loading training data...
+Model exists. Loading model...
+Model loaded: results/van_der_pol_system_10_mu_1.92_3000_samples_N=300000_epoch=20_layer_2_width_20_lr_0.001.pt
+Time taken for training all neural Lyapunov functions: 3.7242307662963867 seconds.
+
+--------------------------------------------------
+Computing local stability of entire network...
+Testing scaling factor for local stability:  0.5
+Local gain matrix R:
+  [[0.45 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.06 0.00]
+ [0.00 1.83 0.00 0.00 0.00 0.01 0.00 0.00 0.07 0.00]
+ [0.00 0.02 1.34 0.00 0.00 0.00 0.00 0.00 0.00 0.12]
+ [0.00 0.00 0.07 1.02 0.00 0.00 0.00 0.00 0.06 0.00]
+ [0.00 0.00 0.00 0.00 0.15 0.00 0.01 0.00 0.00 0.12]
+ [0.01 0.00 0.00 0.00 0.00 0.10 0.00 0.06 0.00 0.00]
+ [0.00 0.00 0.16 0.00 0.08 0.00 0.15 0.00 0.00 0.00]
+ [0.00 0.00 0.08 0.00 0.00 0.00 0.01 1.66 0.00 0.00]
+ [0.00 0.10 0.00 0.00 0.00 0.02 0.00 0.00 1.02 0.00]
+ [0.00 0.00 0.00 0.08 0.00 0.00 0.00 0.10 0.00 1.39]]
+All eigenvalues of R have negative real parts? False
+All entries of R * c1_P are negative? False
+Testing scaling factor for local stability:  0.25
+Local gain matrix R:
+  [[-0.05  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.04  0.00]
+ [ 0.00  0.69  0.00  0.00  0.00  0.00  0.00  0.00  0.05  0.00]
+ [ 0.00  0.01  0.43  0.00  0.00  0.00  0.00  0.00  0.00  0.08]
+ [ 0.00  0.00  0.05  0.26  0.00  0.00  0.00  0.00  0.04  0.00]
+ [ 0.00  0.00  0.00  0.00 -0.16  0.00  0.00  0.00  0.00  0.09]
+ [ 0.01  0.00  0.00  0.00  0.00 -0.19  0.00  0.04  0.00  0.00]
+ [ 0.00  0.00  0.12  0.00  0.05  0.00 -0.10  0.00  0.00  0.00]
+ [ 0.00  0.00  0.05  0.00  0.00  0.00  0.01  0.60  0.00  0.00]
+ [ 0.00  0.07  0.00  0.00  0.00  0.01  0.00  0.00  0.26  0.00]
+ [ 0.00  0.00  0.00  0.06  0.00  0.00  0.00  0.07  0.00  0.47]]
+All eigenvalues of R have negative real parts? False
+All entries of R * c1_P are negative? False
+Testing scaling factor for local stability:  0.125
+Local gain matrix R:
+  [[-0.31  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.03  0.00]
+ [ 0.00  0.11  0.00  0.00  0.00  0.00  0.00  0.00  0.04  0.00]
+ [ 0.00  0.01 -0.04  0.00  0.00  0.00  0.00  0.00  0.00  0.06]
+ [ 0.00  0.00  0.03 -0.14  0.00  0.00  0.00  0.00  0.03  0.00]
+ [ 0.00  0.00  0.00  0.00 -0.32  0.00  0.00  0.00  0.00  0.06]
+ [ 0.01  0.00  0.00  0.00  0.00 -0.34  0.00  0.03  0.00  0.00]
+ [ 0.00  0.00  0.08  0.00  0.04  0.00 -0.24  0.00  0.00  0.00]
+ [ 0.00  0.00  0.04  0.00  0.00  0.00  0.01  0.06  0.00  0.00]
+ [ 0.00  0.05  0.00  0.00  0.00  0.01  0.00  0.00 -0.14  0.00]
+ [ 0.00  0.00  0.00  0.04  0.00  0.00  0.00  0.05  0.00 -0.01]]
+All eigenvalues of R have negative real parts? False
+All entries of R * c1_P are negative? False
+Testing scaling factor for local stability:  0.0625
+Local gain matrix R:
+  [[-0.44  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.02  0.00]
+ [ 0.00 -0.19  0.00  0.00  0.00  0.00  0.00  0.00  0.03  0.00]
+ [ 0.00  0.01 -0.29  0.00  0.00  0.00  0.00  0.00  0.00  0.04]
+ [ 0.00  0.00  0.02 -0.34  0.00  0.00  0.00  0.00  0.02  0.00]
+ [ 0.00  0.00  0.00  0.00 -0.40  0.00  0.00  0.00  0.00  0.04]
+ [ 0.01  0.00  0.00  0.00  0.00 -0.42  0.00  0.02  0.00  0.00]
+ [ 0.00  0.00  0.06  0.00  0.03  0.00 -0.32  0.00  0.00  0.00]
+ [ 0.00  0.00  0.03  0.00  0.00  0.00  0.00 -0.23  0.00  0.00]
+ [ 0.00  0.04  0.00  0.00  0.00  0.01  0.00  0.00 -0.34  0.00]
+ [ 0.00  0.00  0.00  0.03  0.00  0.00  0.00  0.04  0.00 -0.26]]
+All eigenvalues of R have negative real parts? True
+All entries of R * c1_P are negative? True
+Verification successful! Local stability levels verified:  [0.01 0.01 0.01 0.01 0.02 0.02 0.03 0.01 0.01 0.01]
+Testing scaling factor for local stability:  0.09375
+Local gain matrix R:
+  [[-0.37  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.02  0.00]
+ [ 0.00 -0.04  0.00  0.00  0.00  0.00  0.00  0.00  0.03  0.00]
+ [ 0.00  0.01 -0.16  0.00  0.00  0.00  0.00  0.00  0.00  0.05]
+ [ 0.00  0.00  0.03 -0.24  0.00  0.00  0.00  0.00  0.02  0.00]
+ [ 0.00  0.00  0.00  0.00 -0.36  0.00  0.00  0.00  0.00  0.05]
+ [ 0.01  0.00  0.00  0.00  0.00 -0.38  0.00  0.03  0.00  0.00]
+ [ 0.00  0.00  0.07  0.00  0.03  0.00 -0.28  0.00  0.00  0.00]
+ [ 0.00  0.00  0.03  0.00  0.00  0.00  0.00 -0.08  0.00  0.00]
+ [ 0.00  0.04  0.00  0.00  0.00  0.01  0.00  0.00 -0.24  0.00]
+ [ 0.00  0.00  0.00  0.03  0.00  0.00  0.00  0.04  0.00 -0.13]]
+All eigenvalues of R have negative real parts? True
+All entries of R * c1_P are negative? False
+Testing scaling factor for local stability:  0.078125
+Local gain matrix R:
+  [[-0.41  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.02  0.00]
+ [ 0.00 -0.12  0.00  0.00  0.00  0.00  0.00  0.00  0.03  0.00]
+ [ 0.00  0.01 -0.22  0.00  0.00  0.00  0.00  0.00  0.00  0.05]
+ [ 0.00  0.00  0.03 -0.29  0.00  0.00  0.00  0.00  0.02  0.00]
+ [ 0.00  0.00  0.00  0.00 -0.38  0.00  0.00  0.00  0.00  0.05]
+ [ 0.01  0.00  0.00  0.00  0.00 -0.40  0.00  0.02  0.00  0.00]
+ [ 0.00  0.00  0.06  0.00  0.03  0.00 -0.30  0.00  0.00  0.00]
+ [ 0.00  0.00  0.03  0.00  0.00  0.00  0.00 -0.15  0.00  0.00]
+ [ 0.00  0.04  0.00  0.00  0.00  0.01  0.00  0.00 -0.29  0.00]
+ [ 0.00  0.00  0.00  0.03  0.00  0.00  0.00  0.04  0.00 -0.20]]
+All eigenvalues of R have negative real parts? True
+All entries of R * c1_P are negative? True
+Verification successful! Local stability levels verified:  [0.02 0.01 0.01 0.01 0.03 0.03 0.04 0.01 0.01 0.01]
+Testing scaling factor for local stability:  0.0859375
+Local gain matrix R:
+  [[-0.39  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.02  0.00]
+ [ 0.00 -0.08  0.00  0.00  0.00  0.00  0.00  0.00  0.03  0.00]
+ [ 0.00  0.01 -0.19  0.00  0.00  0.00  0.00  0.00  0.00  0.05]
+ [ 0.00  0.00  0.03 -0.27  0.00  0.00  0.00  0.00  0.02  0.00]
+ [ 0.00  0.00  0.00  0.00 -0.37  0.00  0.00  0.00  0.00  0.05]
+ [ 0.01  0.00  0.00  0.00  0.00 -0.39  0.00  0.02  0.00  0.00]
+ [ 0.00  0.00  0.07  0.00  0.03  0.00 -0.29  0.00  0.00  0.00]
+ [ 0.00  0.00  0.03  0.00  0.00  0.00  0.00 -0.12  0.00  0.00]
+ [ 0.00  0.04  0.00  0.00  0.00  0.01  0.00  0.00 -0.27  0.00]
+ [ 0.00  0.00  0.00  0.03  0.00  0.00  0.00  0.04  0.00 -0.16]]
+All eigenvalues of R have negative real parts? True
+All entries of R * c1_P are negative? True
+Verification successful! Local stability levels verified:  [0.02 0.01 0.01 0.01 0.03 0.03 0.05 0.01 0.01 0.01]
+Scaling factor for which local stability is verified:  0.0859375
+Level sets verified for local stability:  [0.02 0.01 0.01 0.01 0.03 0.03 0.05 0.01 0.01 0.01]
+Time taken for verifying local stability using quadratic Lyapunov functions: 11.971361637115479 seconds.
+
+--------------------------------------------------
+Verifying reachability using quadratic Lyapunov functions...
+Verified level sets of quadratic Lyapunov functions for subsystems: 
+ [1.96 1.37 1.50 1.62 2.73 2.73 3.43 1.41 1.62 1.51]
+Target level set: 
+ [0.02 0.01 0.01 0.01 0.03 0.03 0.05 0.01 0.01 0.01]
+Testing scale factor for reachability:  0.5
+Initial level sets for quadratic Lyapunov functions:, 
+ [0.98 0.68 0.75 0.81 1.36 1.36 1.72 0.71 0.81 0.76]
+Target level set: 
+ [0.02 0.01 0.01 0.01 0.03 0.03 0.05 0.01 0.01 0.01]
+Verifying reachability using quadratic Lyapunov functions...
+Total gain for subsystem 1:  0.046389905606771954
+Invariance of V<=0.9793758392333984 verified for subsystem 1.
+Total gain for subsystem 2:  0.05867961613782054
+Invariance of V<=0.6831169128417969 verified for subsystem 2.
+Total gain for subsystem 3:  0.08200746466332229
+Invariance of V<=0.7493019104003906 verified for subsystem 3.
+Total gain for subsystem 4:  0.06352031824828414
+Invariance of V<=0.8080482482910156 verified for subsystem 4.
+Total gain for subsystem 5:  0.10625536791586802
+Invariance of V<=1.3632774353027344 verified for subsystem 5.
+Total gain for subsystem 6:  0.044092549967460745
+Invariance of V<=1.3632774353027344 verified for subsystem 6.
+Total gain for subsystem 7:  0.10738627314335297
+Invariance of V<=1.7156600952148438 verified for subsystem 7.
+Total gain for subsystem 8:  0.029957661152408006
+Invariance of V<=0.7050037384033203 verified for subsystem 8.
+Total gain for subsystem 9:  0.031324226359032724
+Invariance of V<=0.8080482482910156 verified for subsystem 9.
+Total gain for subsystem 10:  0.03941087498565993
+Invariance of V<=0.7571697235107422 verified for subsystem 10.
+Updated level sets for Lyapunov functions after iteration 1: 
+ [0.08 0.11 0.15 0.11 0.23 0.09 0.27 0.05 0.05 0.07]
+Subsystems updated:  [True, True, True, True, True, True, True, True, True, True]
+Total gain for subsystem 1:  0.0010174306077984406
+Invariance of V<=0.08231204410549253 verified for subsystem 1.
+Total gain for subsystem 2:  0.0025111590136497482
+Invariance of V<=0.11249080998823047 verified for subsystem 2.
+Total gain for subsystem 3:  0.004979974424936362
+Invariance of V<=0.15220195055007935 verified for subsystem 3.
+Total gain for subsystem 4:  0.0022483226317359375
+Invariance of V<=0.11284267529845238 verified for subsystem 4.
+Total gain for subsystem 5:  0.005614242738768561
+Invariance of V<=0.22882159100845456 verified for subsystem 5.
+Total gain for subsystem 6:  0.000777376342663214
+Invariance of V<=0.0902805186342448 verified for subsystem 6.
+Total gain for subsystem 7:  0.0038763012213586896
+Invariance of V<=0.2667105873115361 verified for subsystem 7.
+Total gain for subsystem 8:  0.000525630646725102
+Invariance of V<=0.05438993684947491 verified for subsystem 8.
+Total gain for subsystem 9:  0.00040505077644422305
+Invariance of V<=0.054054008796811104 verified for subsystem 9.
+Total gain for subsystem 10:  0.0006278445119404537
+Invariance of V<=0.06950581446290016 verified for subsystem 10.
+Updated level sets for Lyapunov functions after iteration 2: 
+ [0.00 0.00 0.01 0.00 0.01 0.00 0.01 0.00 0.00 0.00]
+Subsystems updated:  [True, True, True, True, True, True, True, True, True, True]
+Successful! Verified reachable level sets contained in target set after iteration 2. 
+
+Time taken for successfully verifying reachability: 16.047959089279175 seconds.
+
+Testing scale factor for reachability:  0.75
+Initial level sets for quadratic Lyapunov functions:, 
+ [1.47 1.02 1.12 1.21 2.04 2.04 2.57 1.06 1.21 1.14]
+Target level set: 
+ [0.02 0.01 0.01 0.01 0.03 0.03 0.05 0.01 0.01 0.01]
+Verifying reachability using quadratic Lyapunov functions...
+Total gain for subsystem 1:  0.0852230438717754
+Invariance of V<=1.4690637588500977 verified for subsystem 1.
+Total gain for subsystem 2:  0.10779513960661098
+Invariance of V<=1.0246753692626953 verified for subsystem 2.
+Total gain for subsystem 3:  0.15159376336200983
+Invariance of V<=1.123952865600586 verified for subsystem 3.
+Total gain for subsystem 4:  0.12321186819637009
+Invariance of V<=1.2120723724365234 verified for subsystem 4.
+Total gain for subsystem 5:  0.195200299212218
+Invariance of V<=2.0449161529541016 verified for subsystem 5.
+Total gain for subsystem 6:  0.08206983163993642
+Invariance of V<=2.0449161529541016 verified for subsystem 6.
+Total gain for subsystem 7:  0.2302610522928573
+Invariance of V<=2.5734901428222656 verified for subsystem 7.
+Total gain for subsystem 8:  0.0660430026882841
+Invariance of V<=1.0575056076049805 verified for subsystem 8.
+Total gain for subsystem 9:  0.0657769673628611
+Invariance of V<=1.2120723724365234 verified for subsystem 9.
+Total gain for subsystem 10:  0.08710640070054124
+Invariance of V<=1.1357545852661133 verified for subsystem 10.
+Updated level sets for Lyapunov functions after iteration 1: 
+ [0.16 0.22 0.31 0.24 0.46 0.17 0.65 0.12 0.12 0.16]
+Subsystems updated:  [True, True, True, True, True, True, True, True, True, True]
+Total gain for subsystem 1:  0.002833362381610321
+Invariance of V<=0.1567336090374738 verified for subsystem 1.
+Total gain for subsystem 2:  0.007187108177444213
+Invariance of V<=0.22195879428181797 verified for subsystem 2.
+Total gain for subsystem 3:  0.01574054031868493
+Invariance of V<=0.3142595262033865 verified for subsystem 3.
+Total gain for subsystem 4:  0.007324431506853019
+Invariance of V<=0.23569717886857688 verified for subsystem 4.
+Total gain for subsystem 5:  0.017384541942047485
+Invariance of V<=0.4626772570190951 verified for subsystem 5.
+Total gain for subsystem 6:  0.0022522544751632915
+Invariance of V<=0.1730515286908485 verified for subsystem 6.
+Total gain for subsystem 7:  0.016592645786683603
+Invariance of V<=0.6494198605651036 verified for subsystem 7.
+Total gain for subsystem 8:  0.0021926062389305504
+Invariance of V<=0.12444279855117202 verified for subsystem 8.
+Total gain for subsystem 9:  0.0014467396825906817
+Invariance of V<=0.1171827781945467 verified for subsystem 9.
+Total gain for subsystem 10:  0.0026170106059241593
+Invariance of V<=0.16193375922739506 verified for subsystem 10.
+Updated level sets for Lyapunov functions after iteration 2: 
+ [0.01 0.01 0.03 0.01 0.04 0.00 0.04 0.00 0.00 0.00]
+Subsystems updated:  [True, True, True, True, True, True, True, True, True, True]
+Total gain for subsystem 1:  3.1687255336448955e-05
+Invariance of V<=0.005050985447496714 verified for subsystem 1.
+Total gain for subsystem 2:  7.631077849349511e-05
+Invariance of V<=0.01327634389625132 verified for subsystem 2.
+Total gain for subsystem 3:  0.00026057756914549203
+Invariance of V<=0.02739029561880102 verified for subsystem 3.
+Total gain for subsystem 4:  6.197471438761475e-05
+Invariance of V<=0.012544429930017031 verified for subsystem 4.
+Total gain for subsystem 5:  0.00025022949388940076
+Invariance of V<=0.035073556714948495 verified for subsystem 5.
+Total gain for subsystem 6:  2.5773907849952883e-05
+Invariance of V<=0.004731877737640389 verified for subsystem 6.
+Total gain for subsystem 7:  0.0001597506224380951
+Invariance of V<=0.038765418922892536 verified for subsystem 7.
+Total gain for subsystem 8:  3.9841825703395055e-05
+Invariance of V<=0.004131889795644383 verified for subsystem 8.
+Total gain for subsystem 9:  2.9790783002132893e-05
+Invariance of V<=0.0026892532105193823 verified for subsystem 9.
+Total gain for subsystem 10:  4.937349057301629e-05
+Invariance of V<=0.004665083883992338 verified for subsystem 10.
+Updated level sets for Lyapunov functions after iteration 3: 
+ [0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00]
+Subsystems updated:  [True, True, True, True, True, True, True, True, True, True]
+Successful! Verified reachable level sets contained in target set after iteration 3. 
+
+Time taken for successfully verifying reachability: 24.580747365951538 seconds.
+
+Testing scale factor for reachability:  0.875
+Initial level sets for quadratic Lyapunov functions:, 
+ [1.71 1.20 1.31 1.41 2.39 2.39 3.00 1.23 1.41 1.33]
+Target level set: 
+ [0.02 0.01 0.01 0.01 0.03 0.03 0.05 0.01 0.01 0.01]
+Verifying reachability using quadratic Lyapunov functions...
+Total gain for subsystem 1:  0.10739230905942103
+Invariance of V<=1.7139077186584473 verified for subsystem 1.
+Total gain for subsystem 2:  0.13583067659180525
+!!!Invariance cannot be verified for subsystem 2 at initial step!!!
+ 
+Testing scale factor for reachability:  0.8125
+Initial level sets for quadratic Lyapunov functions:, 
+ [1.59 1.11 1.22 1.31 2.22 2.22 2.79 1.15 1.31 1.23]
+Target level set: 
+ [0.02 0.01 0.01 0.01 0.03 0.03 0.05 0.01 0.01 0.01]
+Verifying reachability using quadratic Lyapunov functions...
+Total gain for subsystem 1:  0.09609435746572258
+Invariance of V<=1.5914857387542725 verified for subsystem 1.
+Total gain for subsystem 2:  0.1215413463329743
+Invariance of V<=1.11006498336792 verified for subsystem 2.
+Total gain for subsystem 3:  0.17120576540122015
+!!!Invariance cannot be verified for subsystem 3 at initial step!!!
+ 
+Testing scale factor for reachability:  0.78125
+Initial level sets for quadratic Lyapunov functions:, 
+ [1.53 1.07 1.17 1.26 2.13 2.13 2.68 1.10 1.26 1.18]
+Target level set: 
+ [0.02 0.01 0.01 0.01 0.03 0.03 0.05 0.01 0.01 0.01]
+Verifying reachability using quadratic Lyapunov functions...
+Total gain for subsystem 1:  0.09060368785081338
+Invariance of V<=1.530274748802185 verified for subsystem 1.
+Total gain for subsystem 2:  0.11460333139071285
+Invariance of V<=1.0673701763153076 verified for subsystem 2.
+Total gain for subsystem 3:  0.16129775375682698
+Invariance of V<=1.1707842350006104 verified for subsystem 3.
+Total gain for subsystem 4:  0.13199623403557992
+Invariance of V<=1.262575387954712 verified for subsystem 4.
+Total gain for subsystem 5:  0.2075282080789087
+Invariance of V<=2.1301209926605225 verified for subsystem 5.
+Total gain for subsystem 6:  0.08738563741516295
+Invariance of V<=2.1301209926605225 verified for subsystem 6.
+Total gain for subsystem 7:  0.24969316400939995
+Invariance of V<=2.6807188987731934 verified for subsystem 7.
+Total gain for subsystem 8:  0.07196363356944946
+Invariance of V<=1.101568341255188 verified for subsystem 8.
+Total gain for subsystem 9:  0.07104065183986014
+Invariance of V<=1.262575387954712 verified for subsystem 9.
+Total gain for subsystem 10:  0.09476992314102167
+Invariance of V<=1.1830776929855347 verified for subsystem 10.
+Updated level sets for Lyapunov functions after iteration 1: 
+ [0.17 0.24 0.34 0.26 0.50 0.19 0.72 0.14 0.13 0.18]
+Subsystems updated:  [True, True, True, True, True, True, True, True, True, True]
+Total gain for subsystem 1:  0.0031517803558453036
+Invariance of V<=0.16756060176703613 verified for subsystem 1.
+Total gain for subsystem 2:  0.008057694015196125
+Invariance of V<=0.2388944358244771 verified for subsystem 2.
+Total gain for subsystem 3:  0.017926467466113132
+Invariance of V<=0.3414310958760325 verified for subsystem 3.
+Total gain for subsystem 4:  0.00835294051600676
+Invariance of V<=0.2558441337896511 verified for subsystem 4.
+Total gain for subsystem 5:  0.019716405230555824
+Invariance of V<=0.5000271812605206 verified for subsystem 5.
+Total gain for subsystem 6:  0.002526118187071599
+Invariance of V<=0.1851374690886587 verified for subsystem 6.
+Total gain for subsystem 7:  0.01972212031920898
+Invariance of V<=0.723355606169207 verified for subsystem 7.
+Total gain for subsystem 8:  0.0025844210331298343
+Invariance of V<=0.13662029232364148 verified for subsystem 8.
+Total gain for subsystem 9:  0.0016636301006262102
+Invariance of V<=0.12722851352009457 verified for subsystem 9.
+Total gain for subsystem 10:  0.003073461701271827
+Invariance of V<=0.17792379367165267 verified for subsystem 10.
+Updated level sets for Lyapunov functions after iteration 2: 
+ [0.01 0.01 0.03 0.01 0.04 0.01 0.05 0.00 0.00 0.01]
+Subsystems updated:  [True, True, True, True, True, True, True, True, True, True]
+Total gain for subsystem 1:  3.3690494027434715e-05
+Invariance of V<=0.005645352305627682 verified for subsystem 1.
+Total gain for subsystem 2:  8.113507464645264e-05
+Invariance of V<=0.01487257840215861 verified for subsystem 2.
+Total gain for subsystem 3:  0.00030878758217384774
+Invariance of V<=0.03125895042810356 verified for subsystem 3.
+Total gain for subsystem 4:  9.327442077952514e-05
+Invariance of V<=0.01430378580025149 verified for subsystem 4.
+Total gain for subsystem 5:  0.00030319258718579606
+Invariance of V<=0.03979708522727776 verified for subsystem 5.
+Total gain for subsystem 6:  2.75678661855975e-05
+Invariance of V<=0.005333550134878351 verified for subsystem 6.
+Total gain for subsystem 7:  0.00020103309819027772
+Invariance of V<=0.04609272783451246 verified for subsystem 7.
+Total gain for subsystem 8:  4.272266289819023e-05
+Invariance of V<=0.004803057152003021 verified for subsystem 8.
+Total gain for subsystem 9:  3.1221994165140115e-05
+Invariance of V<=0.00304404158324445 verified for subsystem 9.
+Total gain for subsystem 10:  4.842921221619367e-05
+Invariance of V<=0.005473241699860409 verified for subsystem 10.
+Updated level sets for Lyapunov functions after iteration 3: 
+ [0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00]
+Subsystems updated:  [True, True, True, True, True, True, True, True, True, True]
+Successful! Verified reachable level sets contained in target set after iteration 3. 
+
+Time taken for successfully verifying reachability: 25.30088186264038 seconds.
+
+Testing scale factor for reachability:  0.796875
+Initial level sets for quadratic Lyapunov functions:, 
+ [1.56 1.09 1.19 1.29 2.17 2.17 2.73 1.12 1.29 1.21]
+Target level set: 
+ [0.02 0.01 0.01 0.01 0.03 0.03 0.05 0.01 0.01 0.01]
+Verifying reachability using quadratic Lyapunov functions...
+Total gain for subsystem 1:  0.09333699680914885
+Invariance of V<=1.5608802437782288 verified for subsystem 1.
+Total gain for subsystem 2:  0.1180605981848534
+Invariance of V<=1.0887175798416138 verified for subsystem 2.
+Total gain for subsystem 3:  0.16622410413285188
+!!!Invariance cannot be verified for subsystem 3 at initial step!!!
+ 
+Testing scale factor for reachability:  0.7890625
+Initial level sets for quadratic Lyapunov functions:, 
+ [1.55 1.08 1.18 1.28 2.15 2.15 2.71 1.11 1.28 1.19]
+Target level set: 
+ [0.02 0.01 0.01 0.01 0.03 0.03 0.05 0.01 0.01 0.01]
+Verifying reachability using quadratic Lyapunov functions...
+Total gain for subsystem 1:  0.09196707988492184
+Invariance of V<=1.545577496290207 verified for subsystem 1.
+Total gain for subsystem 2:  0.1163222680298542
+Invariance of V<=1.0780438780784607 verified for subsystem 2.
+Total gain for subsystem 3:  0.16375084611086282
+!!!Invariance cannot be verified for subsystem 3 at initial step!!!
+ 
+Scaling factor for which reachability is verified:  0.78125
+Level sets verified for reachability:  [1.53 1.07 1.17 1.26 2.13 2.13 2.68 1.10 1.26 1.18]
+Time taken for verifying reachability using quadratic Lyapunov functions: 74.99326729774475 seconds.
+
+--------------------------------------------------
+Verifying reachability using SOS Lyapunov functions...
+Verified V<=0.32611083984375 is contained in x^TPx<=1.530274748802185.
+Verified V<=0.1405029296875 is contained in x^TPx<=1.0673701763153076.
+Verified V<=0.168212890625 is contained in x^TPx<=1.1707842350006104.
+Verified V<=0.2015380859375 is contained in x^TPx<=1.262575387954712.
+Verified V<=0.34197998046875 is contained in x^TPx<=2.1301209926605225.
+Verified V<=0.34197998046875 is contained in x^TPx<=2.1301209926605225.
+Verified V<=0.33233642578125 is contained in x^TPx<=2.6807188987731934.
+Verified V<=0.15081787109375 is contained in x^TPx<=1.101568341255188.
+Verified V<=0.2015380859375 is contained in x^TPx<=1.262575387954712.
+Verified V<=0.16961669921875 is contained in x^TPx<=1.1830776929855347.
+Target level set: 
+ [0.32611083984375, 0.1405029296875, 0.168212890625, 0.2015380859375, 0.34197998046875, 0.34197998046875, 0.33233642578125, 0.15081787109375, 0.2015380859375, 0.16961669921875]
+Testing scale factor for reachability:  0.5
+Initial level sets for SOS Lyapunov functions:, 
+ [0.50 0.50 0.50 0.50 0.50 0.50 0.50 0.50 0.50 0.50]
+Target level set: 
+ [0.32611083984375, 0.1405029296875, 0.168212890625, 0.2015380859375, 0.34197998046875, 0.34197998046875, 0.33233642578125, 0.15081787109375, 0.2015380859375, 0.16961669921875]
+Verifying reachability using SOS Lyapunov functions...
+Total gain for subsystem 1:  0.05347411277658422
+Invariance of V<=0.5 verified for subsystem 1.
+Total gain for subsystem 2:  0.11882260838241723
+!!!Invariance cannot be verified for subsystem 2 at initial step!!!
+ 
+Testing scale factor for reachability:  0.25
+Initial level sets for SOS Lyapunov functions:, 
+ [0.25 0.25 0.25 0.25 0.25 0.25 0.25 0.25 0.25 0.25]
+Target level set: 
+ [0.32611083984375, 0.1405029296875, 0.168212890625, 0.2015380859375, 0.34197998046875, 0.34197998046875, 0.33233642578125, 0.15081787109375, 0.2015380859375, 0.16961669921875]
+Verifying reachability using SOS Lyapunov functions...
+Total gain for subsystem 1:  0.018839710773928677
+Invariance of V<=0.25 verified for subsystem 1.
+Total gain for subsystem 2:  0.04138305175707608
+!!!Invariance cannot be verified for subsystem 2 at initial step!!!
+ 
+Testing scale factor for reachability:  0.125
+Initial level sets for SOS Lyapunov functions:, 
+ [0.12 0.12 0.12 0.12 0.12 0.12 0.12 0.12 0.12 0.12]
+Target level set: 
+ [0.32611083984375, 0.1405029296875, 0.168212890625, 0.2015380859375, 0.34197998046875, 0.34197998046875, 0.33233642578125, 0.15081787109375, 0.2015380859375, 0.16961669921875]
+Verifying reachability using SOS Lyapunov functions...
+Total gain for subsystem 1:  0.006553501131902675
+Invariance of V<=0.125 verified for subsystem 1.
+Total gain for subsystem 2:  0.014538889348726778
+Invariance of V<=0.125 verified for subsystem 2.
+Total gain for subsystem 3:  0.019598754407539453
+Invariance of V<=0.125 verified for subsystem 3.
+Total gain for subsystem 4:  0.015171508602996396
+Invariance of V<=0.125 verified for subsystem 4.
+Total gain for subsystem 5:  0.009178662027372133
+Invariance of V<=0.125 verified for subsystem 5.
+Total gain for subsystem 6:  0.0040086753124775505
+Invariance of V<=0.125 verified for subsystem 6.
+Total gain for subsystem 7:  0.011459078714856422
+Invariance of V<=0.125 verified for subsystem 7.
+Total gain for subsystem 8:  0.013348625853994772
+Invariance of V<=0.125 verified for subsystem 8.
+Total gain for subsystem 9:  0.00945423439539941
+Invariance of V<=0.125 verified for subsystem 9.
+Total gain for subsystem 10:  0.016081995121819667
+Invariance of V<=0.125 verified for subsystem 10.
+Updated level sets for Lyapunov functions after iteration 1: 
+ [0.01 0.04 0.08 0.04 0.06 0.03 0.08 0.04 0.02 0.07]
+Subsystems updated:  [True, True, True, True, True, True, True, True, True, True]
+Successful! Verified reachable level sets contained in target set after iteration 1. 
+
+Time taken for successfully verifying reachability: 32.586998462677 seconds.
+
+Testing scale factor for reachability:  0.1875
+Initial level sets for SOS Lyapunov functions:, 
+ [0.19 0.19 0.19 0.19 0.19 0.19 0.19 0.19 0.19 0.19]
+Target level set: 
+ [0.32611083984375, 0.1405029296875, 0.168212890625, 0.2015380859375, 0.34197998046875, 0.34197998046875, 0.33233642578125, 0.15081787109375, 0.2015380859375, 0.16961669921875]
+Verifying reachability using SOS Lyapunov functions...
+Total gain for subsystem 1:  0.012163595168251214
+Invariance of V<=0.1875 verified for subsystem 1.
+Total gain for subsystem 2:  0.02670759223260402
+!!!Invariance cannot be verified for subsystem 2 at initial step!!!
+ 
+Testing scale factor for reachability:  0.15625
+Initial level sets for SOS Lyapunov functions:, 
+ [0.16 0.16 0.16 0.16 0.16 0.16 0.16 0.16 0.16 0.16]
+Target level set: 
+ [0.32611083984375, 0.1405029296875, 0.168212890625, 0.2015380859375, 0.34197998046875, 0.34197998046875, 0.33233642578125, 0.15081787109375, 0.2015380859375, 0.16961669921875]
+Verifying reachability using SOS Lyapunov functions...
+Total gain for subsystem 1:  0.009219482487990493
+Invariance of V<=0.15625 verified for subsystem 1.
+Total gain for subsystem 2:  0.020280193803567048
+Invariance of V<=0.15625 verified for subsystem 2.
+Total gain for subsystem 3:  0.027170968334862513
+Invariance of V<=0.15625 verified for subsystem 3.
+Total gain for subsystem 4:  0.023307858522852706
+Invariance of V<=0.15625 verified for subsystem 4.
+Total gain for subsystem 5:  0.01282906876093795
+Invariance of V<=0.15625 verified for subsystem 5.
+Total gain for subsystem 6:  0.005603985046137967
+Invariance of V<=0.15625 verified for subsystem 6.
+Total gain for subsystem 7:  0.018249433790165442
+Invariance of V<=0.15625 verified for subsystem 7.
+Total gain for subsystem 8:  0.021847701988176718
+Invariance of V<=0.15625 verified for subsystem 8.
+Total gain for subsystem 9:  0.014222954289630134
+Invariance of V<=0.15625 verified for subsystem 9.
+Total gain for subsystem 10:  0.02663819768136856
+!!!Invariance cannot be verified for subsystem 10 at initial step!!!
+ 
+Testing scale factor for reachability:  0.140625
+Initial level sets for SOS Lyapunov functions:, 
+ [0.14 0.14 0.14 0.14 0.14 0.14 0.14 0.14 0.14 0.14]
+Target level set: 
+ [0.32611083984375, 0.1405029296875, 0.168212890625, 0.2015380859375, 0.34197998046875, 0.34197998046875, 0.33233642578125, 0.15081787109375, 0.2015380859375, 0.16961669921875]
+Verifying reachability using SOS Lyapunov functions...
+Total gain for subsystem 1:  0.007851685843578291
+Invariance of V<=0.140625 verified for subsystem 1.
+Total gain for subsystem 2:  0.017316570453227126
+Invariance of V<=0.140625 verified for subsystem 2.
+Total gain for subsystem 3:  0.023301228504084257
+Invariance of V<=0.140625 verified for subsystem 3.
+Total gain for subsystem 4:  0.018731981893541652
+Invariance of V<=0.140625 verified for subsystem 4.
+Total gain for subsystem 5:  0.01094315473322071
+Invariance of V<=0.140625 verified for subsystem 5.
+Total gain for subsystem 6:  0.004779857063797798
+Invariance of V<=0.140625 verified for subsystem 6.
+Total gain for subsystem 7:  0.014385361059015039
+Invariance of V<=0.140625 verified for subsystem 7.
+Total gain for subsystem 8:  0.01690475937812358
+Invariance of V<=0.140625 verified for subsystem 8.
+Total gain for subsystem 9:  0.011679128556191975
+Invariance of V<=0.140625 verified for subsystem 9.
+Total gain for subsystem 10:  0.020486221340155895
+Invariance of V<=0.140625 verified for subsystem 10.
+Updated level sets for Lyapunov functions after iteration 1: 
+ [0.01 0.04 0.10 0.05 0.07 0.03 0.10 0.06 0.03 0.10]
+Subsystems updated:  [True, True, True, True, True, True, True, True, True, True]
+Successful! Verified reachable level sets contained in target set after iteration 1. 
+
+Time taken for successfully verifying reachability: 36.29620122909546 seconds.
+
+Testing scale factor for reachability:  0.1484375
+Initial level sets for SOS Lyapunov functions:, 
+ [0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15]
+Target level set: 
+ [0.32611083984375, 0.1405029296875, 0.168212890625, 0.2015380859375, 0.34197998046875, 0.34197998046875, 0.33233642578125, 0.15081787109375, 0.2015380859375, 0.16961669921875]
+Verifying reachability using SOS Lyapunov functions...
+Total gain for subsystem 1:  0.008519496727936443
+Invariance of V<=0.1484375 verified for subsystem 1.
+Total gain for subsystem 2:  0.018782106408572086
+Invariance of V<=0.1484375 verified for subsystem 2.
+Total gain for subsystem 3:  0.02521562811374536
+Invariance of V<=0.1484375 verified for subsystem 3.
+Total gain for subsystem 4:  0.020812777911771302
+Invariance of V<=0.1484375 verified for subsystem 4.
+Total gain for subsystem 5:  0.011876488234676985
+Invariance of V<=0.1484375 verified for subsystem 5.
+Total gain for subsystem 6:  0.0051874551198954535
+Invariance of V<=0.1484375 verified for subsystem 6.
+Total gain for subsystem 7:  0.016091940203309472
+Invariance of V<=0.1484375 verified for subsystem 7.
+Total gain for subsystem 8:  0.019062661495993994
+Invariance of V<=0.1484375 verified for subsystem 8.
+Total gain for subsystem 9:  0.012919195679162101
+Invariance of V<=0.1484375 verified for subsystem 9.
+Total gain for subsystem 10:  0.023142235860693486
+Invariance of V<=0.1484375 verified for subsystem 10.
+Updated level sets for Lyapunov functions after iteration 1: 
+ [0.01 0.05 0.12 0.05 0.07 0.03 0.11 0.07 0.03 0.12]
+Subsystems updated:  [True, True, True, True, True, True, True, True, True, True]
+Successful! Verified reachable level sets contained in target set after iteration 1. 
+
+Time taken for successfully verifying reachability: 38.507222175598145 seconds.
+
+Scaling factor for which reachability is verified:  0.1484375
+Level sets verified for reachability:  [0.23 0.16 0.17 0.19 0.32 0.32 0.40 0.16 0.19 0.18]
+Time taken for verifying reachability using SOS Lyapunov functions: 166.34553241729736 seconds.
+
+--------------------------------------------------
+Verifying reachability using neural Lyapunov functions...
+Verified level sets of neural Lyapunov functions for subsystems: 
+ [0.79 0.68 0.71 0.72 0.92 0.87 0.91 0.61 0.73 0.67]
+Verified V<=0.14773925781250002 is contained in x^TPx<=1.530274748802185.
+Verified V<=0.0862451171875 is contained in x^TPx<=1.0673701763153076.
+Verified V<=0.08796997070312498 is contained in x^TPx<=1.1707842350006104.
+Verified V<=0.11592773437500001 is contained in x^TPx<=1.262575387954712.
+Verified V<=0.23393066406250002 is contained in x^TPx<=2.1301209926605225.
+Verified V<=0.23247436523437498 is contained in x^TPx<=2.1301209926605225.
+Verified V<=0.29537231445312495 is contained in x^TPx<=2.6807188987731934.
+Verified V<=0.097769775390625 is contained in x^TPx<=1.101568341255188.
+Verified V<=0.1169140625 is contained in x^TPx<=1.262575387954712.
+Verified V<=0.11630126953125001 is contained in x^TPx<=1.1830776929855347.
+Target level set: 
+ [0.14773925781250002, 0.0862451171875, 0.08796997070312498, 0.11592773437500001, 0.23393066406250002, 0.23247436523437498, 0.29537231445312495, 0.097769775390625, 0.1169140625, 0.11630126953125001]
+Lower bounds of neural Lyapunov functions: 
+ [ 0.01  0.00 -0.00  0.01  0.01  0.01  0.01  0.02  0.01  0.01]
+Testing scale factor for reachability:  0.5
+Initial level sets for neural Lyapunov functions:, 
+ [0.40 0.34 0.35 0.36 0.46 0.43 0.46 0.30 0.36 0.34]
+Target level set: 
+ [0.14773925781250002, 0.0862451171875, 0.08796997070312498, 0.11592773437500001, 0.23393066406250002, 0.23247436523437498, 0.29537231445312495, 0.097769775390625, 0.1169140625, 0.11630126953125001]
+Verifying reachability using neural Lyapunov functions...
+Total gain for subsystem 1:  0.08440710756973983
+Invariance of V<=0.395 verified for subsystem 1.
+Total gain for subsystem 2:  0.19337499176699466
+!!!Invariance cannot be verified for subsystem 2 at initial step!!!
+ 
+Testing scale factor for reachability:  0.25
+Initial level sets for neural Lyapunov functions:, 
+ [0.20 0.17 0.18 0.18 0.23 0.22 0.23 0.15 0.18 0.17]
+Target level set: 
+ [0.14773925781250002, 0.0862451171875, 0.08796997070312498, 0.11592773437500001, 0.23393066406250002, 0.23247436523437498, 0.29537231445312495, 0.097769775390625, 0.1169140625, 0.11630126953125001]
+Verifying reachability using neural Lyapunov functions...
+Total gain for subsystem 1:  0.02252252637497788
+Invariance of V<=0.1975 verified for subsystem 1.
+Total gain for subsystem 2:  0.05524336157646154
+Invariance of V<=0.17 verified for subsystem 2.
+Total gain for subsystem 3:  0.066763527550832
+Invariance of V<=0.1775 verified for subsystem 3.
+Total gain for subsystem 4:  0.06002941090551357
+Invariance of V<=0.18 verified for subsystem 4.
+Total gain for subsystem 5:  0.03683120497096426
+Invariance of V<=0.23 verified for subsystem 5.
+Total gain for subsystem 6:  0.015013692714281525
+Invariance of V<=0.2175 verified for subsystem 6.
+Total gain for subsystem 7:  0.04694051519072075
+Invariance of V<=0.2275 verified for subsystem 7.
+Total gain for subsystem 8:  0.039467008896553996
+Invariance of V<=0.1525 verified for subsystem 8.
+Total gain for subsystem 9:  0.042020564711264544
+Invariance of V<=0.1825 verified for subsystem 9.
+Total gain for subsystem 10:  0.06734182673376463
+Invariance of V<=0.1675 verified for subsystem 10.
+Updated level sets for Lyapunov functions after iteration 1: 
+ [0.06 0.12 0.14 0.16 0.08 0.09 0.12 0.12 0.13 0.16]
+Subsystems updated:  [True, True, True, True, True, True, True, True, True, True]
+Total gain for subsystem 1:  0.00408263330092337
+Invariance of V<=0.060850830078125 verified for subsystem 1.
+Total gain for subsystem 2:  0.02746716708685894
+Invariance of V<=0.11994628906250002 verified for subsystem 2.
+Total gain for subsystem 3:  0.04628717254080454
+Invariance of V<=0.13832519531249998 verified for subsystem 3.
+Total gain for subsystem 4:  0.047566671274750796
+Invariance of V<=0.16224609375000004 verified for subsystem 4.
+Total gain for subsystem 5:  0.010207785906193418
+Invariance of V<=0.08046630859375001 verified for subsystem 5.
+Total gain for subsystem 6:  0.004079397755828189
+Invariance of V<=0.0887310791015625 verified for subsystem 6.
+Total gain for subsystem 7:  0.019395546829931557
+Invariance of V<=0.12452514648437499 verified for subsystem 7.
+Total gain for subsystem 8:  0.024898209389607462
+Invariance of V<=0.120406494140625 verified for subsystem 8.
+Total gain for subsystem 9:  0.02362394684762688
+Invariance of V<=0.13099365234375 verified for subsystem 9.
+Total gain for subsystem 10:  0.05691731763512144
+Invariance of V<=0.15678588867187498 verified for subsystem 10.
+Updated level sets for Lyapunov functions after iteration 2: 
+ [0.03 0.09 0.12 0.14 0.04 0.05 0.07 0.11 0.11 0.13]
+Subsystems updated:  [True, True, True, True, True, True, True, True, True, True]
+Total gain for subsystem 1:  0.0010346834547028
+Invariance of V<=0.0287021005153656 verified for subsystem 1.
+Total gain for subsystem 2:  0.015066848333603243
+Invariance of V<=0.09118963479995729 verified for subsystem 2.
+Total gain for subsystem 3:  0.033195115660557994
+Invariance of V<=0.11752238273620604 verified for subsystem 3.
+Total gain for subsystem 4:  0.03613686906009396
+Invariance of V<=0.13792502403259277 verified for subsystem 4.
+Total gain for subsystem 5:  0.003034094196587271
+Invariance of V<=0.03551833152770996 verified for subsystem 5.
+Total gain for subsystem 6:  0.0018060640067519135
+Invariance of V<=0.05467706143856048 verified for subsystem 6.
+Total gain for subsystem 7:  0.008679710037089942
+Invariance of V<=0.06816049277782438 verified for subsystem 7.
+Total gain for subsystem 8:  0.019131807933994792
+Invariance of V<=0.10723703384399413 verified for subsystem 8.
+Total gain for subsystem 9:  0.01588657283637564
+Invariance of V<=0.10534499287605284 verified for subsystem 9.
+Total gain for subsystem 10:  0.03776616687666762
+Invariance of V<=0.12501531064510346 verified for subsystem 10.
+Updated level sets for Lyapunov functions after iteration 3: 
+ [0.02 0.07 0.10 0.11 0.02 0.04 0.04 0.10 0.09 0.10]
+Subsystems updated:  [True, True, True, True, True, True, True, True, True, True]
+Total gain for subsystem 1:  0.0005578073604865214
+Invariance of V<=0.022031104497145862 verified for subsystem 1.
+Total gain for subsystem 2:  0.009585102798494992
+Invariance of V<=0.07498210205230862 verified for subsystem 2.
+Total gain for subsystem 3:  0.02451508213415863
+Invariance of V<=0.10375022850930689 verified for subsystem 3.
+Total gain for subsystem 4:  0.02570523024100905
+Invariance of V<=0.10984165732283147 verified for subsystem 4.
+Total gain for subsystem 5:  0.0011852021105162583
+Invariance of V<=0.02108900934457779 verified for subsystem 5.
+Total gain for subsystem 6:  0.001296391713990331
+Invariance of V<=0.04415813457977492 verified for subsystem 6.
+Total gain for subsystem 7:  0.004691486110950467
+Invariance of V<=0.043865004629478774 verified for subsystem 7.
+Total gain for subsystem 8:  0.016616792133677494
+Invariance of V<=0.10184376505203546 verified for subsystem 8.
+Total gain for subsystem 9:  0.012602674788293564
+Invariance of V<=0.09289700055378487 verified for subsystem 9.
+Total gain for subsystem 10:  0.02395681551289919
+Invariance of V<=0.09705778511997779 verified for subsystem 10.
+Updated level sets for Lyapunov functions after iteration 4: 
+ [0.02 0.07 0.09 0.08 0.02 0.04 0.03 0.10 0.09 0.08]
+Subsystems updated:  [True, True, True, True, True, True, True, True, True, True]
+Total gain for subsystem 1:  0.0005383050138559636
+Invariance of V<=0.020826278469958198 verified for subsystem 1.
+Total gain for subsystem 2:  0.0071625174904651695
+Invariance of V<=0.06634158638612463 verified for subsystem 2.
+Total gain for subsystem 3:  0.018678364050329074
+Invariance of V<=0.0942262817516166 verified for subsystem 3.
+Total gain for subsystem 4:  0.016987575933461636
+Invariance of V<=0.08243487661386326 verified for subsystem 4.
+Total gain for subsystem 5:  0.0007233337586089004
+Invariance of V<=0.016558167493203654 verified for subsystem 5.
+Total gain for subsystem 6:  0.0011581331617366154
+Invariance of V<=0.041312004811937864 verified for subsystem 6.
+Total gain for subsystem 7:  0.0030739506678088956
+Invariance of V<=0.03366981800661163 verified for subsystem 7.
+Total gain for subsystem 8:  0.01531153065112336
+Invariance of V<=0.09945680180862837 verified for subsystem 8.
+Total gain for subsystem 9:  0.011336255462805636
+Invariance of V<=0.08709093801917331 verified for subsystem 9.
+Total gain for subsystem 10:  0.015831708051469526
+Invariance of V<=0.07658465857123248 verified for subsystem 10.
+Updated level sets for Lyapunov functions after iteration 5: 
+ [0.02 0.06 0.09 0.06 0.02 0.04 0.03 0.10 0.08 0.06]
+Subsystems updated:  [True, True, True, True, True, True, True, True, True, True]
+Total gain for subsystem 1:  0.000530078231155115
+Total gain for subsystem 2:  0.0067551738279444
+Invariance of V<=0.06478670545519984 verified for subsystem 2.
+Total gain for subsystem 3:  0.014896275364101713
+Invariance of V<=0.08750897846268299 verified for subsystem 3.
+Total gain for subsystem 4:  0.010874774850126109
+Invariance of V<=0.060699118131692285 verified for subsystem 4.
+Total gain for subsystem 5:  0.0006354472623312082
+Invariance of V<=0.015199880316026792 verified for subsystem 5.
+Total gain for subsystem 6:  0.0010848627011308225
+Invariance of V<=0.040505129717954697 verified for subsystem 6.
+Total gain for subsystem 7:  0.00244431290136926
+Invariance of V<=0.029132283939314364 verified for subsystem 7.
+Total gain for subsystem 8:  0.014571954529389246
+Invariance of V<=0.09819416662941727 verified for subsystem 8.
+Total gain for subsystem 9:  0.010904071530320488
+Invariance of V<=0.08470954518271154 verified for subsystem 9.
+Total gain for subsystem 10:  0.0113942391619485
+Invariance of V<=0.06267377332294222 verified for subsystem 10.
+Updated level sets for Lyapunov functions after iteration 6: 
+ [0.02 0.06 0.08 0.05 0.01 0.04 0.03 0.10 0.08 0.05]
+Subsystems updated:  [False, True, True, True, True, True, True, True, True, True]
+Successful! Verified reachable level sets contained in target set after iteration 6. 
+
+Time taken for successfully verifying reachability: 6320.534932851791 seconds.
+
+Testing scale factor for reachability:  0.375
+Initial level sets for neural Lyapunov functions:, 
+ [0.30 0.26 0.27 0.27 0.35 0.33 0.34 0.23 0.27 0.25]
+Target level set: 
+ [0.14773925781250002, 0.0862451171875, 0.08796997070312498, 0.11592773437500001, 0.23393066406250002, 0.23247436523437498, 0.29537231445312495, 0.097769775390625, 0.1169140625, 0.11630126953125001]
+Verifying reachability using neural Lyapunov functions...
+Total gain for subsystem 1:  0.04448587033129652
+Invariance of V<=0.29625 verified for subsystem 1.
+Total gain for subsystem 2:  0.10107081545743923
+Invariance of V<=0.255 verified for subsystem 2.
+Total gain for subsystem 3:  0.12278471694531455
+Invariance of V<=0.26625 verified for subsystem 3.
+Total gain for subsystem 4:  0.11386720314282184
+Invariance of V<=0.27 verified for subsystem 4.
+Total gain for subsystem 5:  0.06870531549560738
+Invariance of V<=0.34500000000000003 verified for subsystem 5.
+Total gain for subsystem 6:  0.02958434707557673
+Invariance of V<=0.32625 verified for subsystem 6.
+Total gain for subsystem 7:  0.089154888912583
+Invariance of V<=0.34125 verified for subsystem 7.
+Total gain for subsystem 8:  0.09168825592167582
+Invariance of V<=0.22875 verified for subsystem 8.
+Total gain for subsystem 9:  0.09648561103667978
+Invariance of V<=0.27375 verified for subsystem 9.
+Total gain for subsystem 10:  0.14450536885164003
+!!!Invariance cannot be verified for subsystem 10 at initial step!!!
+ 
+Testing scale factor for reachability:  0.3125
+Initial level sets for neural Lyapunov functions:, 
+ [0.25 0.21 0.22 0.22 0.29 0.27 0.28 0.19 0.23 0.21]
+Target level set: 
+ [0.14773925781250002, 0.0862451171875, 0.08796997070312498, 0.11592773437500001, 0.23393066406250002, 0.23247436523437498, 0.29537231445312495, 0.097769775390625, 0.1169140625, 0.11630126953125001]
+Verifying reachability using neural Lyapunov functions...
+Total gain for subsystem 1:  0.0329871128286409
+Invariance of V<=0.246875 verified for subsystem 1.
+Total gain for subsystem 2:  0.07909256074997514
+Invariance of V<=0.21250000000000002 verified for subsystem 2.
+Total gain for subsystem 3:  0.09485739753789878
+Invariance of V<=0.221875 verified for subsystem 3.
+Total gain for subsystem 4:  0.08309295840467373
+Invariance of V<=0.22499999999999998 verified for subsystem 4.
+Total gain for subsystem 5:  0.051616062152060486
+Invariance of V<=0.28750000000000003 verified for subsystem 5.
+Total gain for subsystem 6:  0.02141112792076909
+Invariance of V<=0.271875 verified for subsystem 6.
+Total gain for subsystem 7:  0.06548325875102208
+Invariance of V<=0.284375 verified for subsystem 7.
+Total gain for subsystem 8:  0.059269392816131486
+Invariance of V<=0.190625 verified for subsystem 8.
+Total gain for subsystem 9:  0.06522207959833508
+Invariance of V<=0.228125 verified for subsystem 9.
+Total gain for subsystem 10:  0.10010121989953322
+!!!Invariance cannot be verified for subsystem 10 at initial step!!!
+ 
+Testing scale factor for reachability:  0.28125
+Initial level sets for neural Lyapunov functions:, 
+ [0.22 0.19 0.20 0.20 0.26 0.24 0.26 0.17 0.21 0.19]
+Target level set: 
+ [0.14773925781250002, 0.0862451171875, 0.08796997070312498, 0.11592773437500001, 0.23393066406250002, 0.23247436523437498, 0.29537231445312495, 0.097769775390625, 0.1169140625, 0.11630126953125001]
+Verifying reachability using neural Lyapunov functions...
+Total gain for subsystem 1:  0.02766024966063213
+Invariance of V<=0.2221875 verified for subsystem 1.
+Total gain for subsystem 2:  0.06731177466448857
+Invariance of V<=0.19125 verified for subsystem 2.
+Total gain for subsystem 3:  0.08082162547803463
+Invariance of V<=0.1996875 verified for subsystem 3.
+Total gain for subsystem 4:  0.07131333796316104
+Invariance of V<=0.20249999999999999 verified for subsystem 4.
+Total gain for subsystem 5:  0.04398837179963623
+Invariance of V<=0.25875000000000004 verified for subsystem 5.
+Total gain for subsystem 6:  0.018060603099081158
+Invariance of V<=0.2446875 verified for subsystem 6.
+Total gain for subsystem 7:  0.05582274314666676
+Invariance of V<=0.2559375 verified for subsystem 7.
+Total gain for subsystem 8:  0.048825813159410314
+Invariance of V<=0.1715625 verified for subsystem 8.
+Total gain for subsystem 9:  0.05236462894783499
+Invariance of V<=0.2053125 verified for subsystem 9.
+Total gain for subsystem 10:  0.08305988307998721
+!!!Invariance cannot be verified for subsystem 10 at initial step!!!
+ 
+Testing scale factor for reachability:  0.265625
+Initial level sets for neural Lyapunov functions:, 
+ [0.21 0.18 0.19 0.19 0.24 0.23 0.24 0.16 0.19 0.18]
+Target level set: 
+ [0.14773925781250002, 0.0862451171875, 0.08796997070312498, 0.11592773437500001, 0.23393066406250002, 0.23247436523437498, 0.29537231445312495, 0.097769775390625, 0.1169140625, 0.11630126953125001]
+Verifying reachability using neural Lyapunov functions...
+Total gain for subsystem 1:  0.02506388598326354
+Invariance of V<=0.20984375 verified for subsystem 1.
+Total gain for subsystem 2:  0.06128615992946525
+Invariance of V<=0.180625 verified for subsystem 2.
+Total gain for subsystem 3:  0.07378258140357975
+Invariance of V<=0.18859375 verified for subsystem 3.
+Total gain for subsystem 4:  0.06565370096488418
+Invariance of V<=0.19125 verified for subsystem 4.
+Total gain for subsystem 5:  0.040363705026779335
+Invariance of V<=0.244375 verified for subsystem 5.
+Total gain for subsystem 6:  0.0165264689120121
+Invariance of V<=0.23109375 verified for subsystem 6.
+Total gain for subsystem 7:  0.051348428451798545
+Invariance of V<=0.24171875 verified for subsystem 7.
+Total gain for subsystem 8:  0.04405335981159605
+Invariance of V<=0.16203125 verified for subsystem 8.
+Total gain for subsystem 9:  0.04654910101549409
+Invariance of V<=0.19390625 verified for subsystem 9.
+Total gain for subsystem 10:  0.07507154428421764
+Invariance of V<=0.17796875 verified for subsystem 10.
+Updated level sets for Lyapunov functions after iteration 1: 
+ [0.07 0.13 0.15 0.17 0.09 0.09 0.13 0.12 0.14 0.18]
+Subsystems updated:  [True, True, True, True, True, True, True, True, True, True]
+Total gain for subsystem 1:  0.004659283795549871
+Invariance of V<=0.06501262664794921 verified for subsystem 1.
+Total gain for subsystem 2:  0.030131345519426082
+Invariance of V<=0.1254144287109375 verified for subsystem 2.
+Total gain for subsystem 3:  0.05212683955199593
+Invariance of V<=0.14549713134765624 verified for subsystem 3.
+Total gain for subsystem 4:  0.05172346184990208
+Invariance of V<=0.171265869140625 verified for subsystem 4.
+Total gain for subsystem 5:  0.011759865256017313
+Invariance of V<=0.08633071899414063 verified for subsystem 5.
+Total gain for subsystem 6:  0.004394402608562491
+Invariance of V<=0.09258419036865234 verified for subsystem 6.
+Total gain for subsystem 7:  0.021465381922278974
+Invariance of V<=0.1334882354736328 verified for subsystem 7.
+Total gain for subsystem 8:  0.026796049749751173
+Invariance of V<=0.12445075988769531 verified for subsystem 8.
+Total gain for subsystem 9:  0.02543247254167534
+Invariance of V<=0.13690841674804688 verified for subsystem 9.
+Total gain for subsystem 10:  0.06900362107985837
+Invariance of V<=0.17657836914062502 verified for subsystem 10.
+Updated level sets for Lyapunov functions after iteration 2: 
+ [0.03 0.09 0.12 0.15 0.04 0.06 0.07 0.11 0.11 0.16]
+Subsystems updated:  [True, True, True, True, True, True, True, True, True, True]
+Total gain for subsystem 1:  0.0012111048044485932
+Invariance of V<=0.02983977980911731 verified for subsystem 1.
+Total gain for subsystem 2:  0.01625348382424538
+Invariance of V<=0.09430577158927916 verified for subsystem 2.
+Total gain for subsystem 3:  0.03957700912068995
+Invariance of V<=0.12347363978624343 verified for subsystem 3.
+Total gain for subsystem 4:  0.03980584188877148
+Invariance of V<=0.146763476729393 verified for subsystem 4.
+Total gain for subsystem 5:  0.003702317297551014
+Invariance of V<=0.03835984095931053 verified for subsystem 5.
+Total gain for subsystem 6:  0.0019137995247897775
+Invariance of V<=0.05596641976386309 verified for subsystem 6.
+Total gain for subsystem 7:  0.009700197189380796
+Invariance of V<=0.07261029995977877 verified for subsystem 7.
+Total gain for subsystem 8:  0.020236337541399183
+Invariance of V<=0.10901594884693623 verified for subsystem 8.
+Total gain for subsystem 9:  0.016659798748496643
+Invariance of V<=0.10802929759025573 verified for subsystem 9.
+Total gain for subsystem 10:  0.05600942003300256
+Invariance of V<=0.16088634610176092 verified for subsystem 10.
+Updated level sets for Lyapunov functions after iteration 3: 
+ [0.02 0.08 0.11 0.12 0.02 0.04 0.05 0.10 0.09 0.12]
+Subsystems updated:  [True, True, True, True, True, True, True, True, True, True]
+Total gain for subsystem 1:  0.0005621212389411717
+Invariance of V<=0.022438115676777667 verified for subsystem 1.
+Total gain for subsystem 2:  0.010130766451912547
+Invariance of V<=0.07671553489635698 verified for subsystem 2.
+Total gain for subsystem 3:  0.029898335050966413
+Invariance of V<=0.11051131920321494 verified for subsystem 3.
+Total gain for subsystem 4:  0.029109898685897764
+Invariance of V<=0.11931698669650359 verified for subsystem 4.
+Total gain for subsystem 5:  0.0016213401401913865
+Invariance of V<=0.022626312440843323 verified for subsystem 5.
+Total gain for subsystem 6:  0.0013033399054688084
+Invariance of V<=0.04476220486973034 verified for subsystem 6.
+Total gain for subsystem 7:  0.0052408186208297595
+Invariance of V<=0.046374156419624335 verified for subsystem 7.
+Total gain for subsystem 8:  0.017359870222344274
+Invariance of V<=0.10289444781305065 verified for subsystem 8.
+Total gain for subsystem 9:  0.012936348705882575
+Invariance of V<=0.09420914330868982 verified for subsystem 9.
+Total gain for subsystem 10:  0.034243501717066464
+Invariance of V<=0.1215288952243282 verified for subsystem 10.
+Updated level sets for Lyapunov functions after iteration 4: 
+ [0.02 0.07 0.10 0.09 0.02 0.04 0.04 0.10 0.09 0.09]
+Subsystems updated:  [True, True, True, True, True, True, True, True, True, True]
+Total gain for subsystem 1:  0.0005403152073664924
+Invariance of V<=0.020860435668254237 verified for subsystem 1.
+Total gain for subsystem 2:  0.007383953297342195
+Invariance of V<=0.0672759280634068 verified for subsystem 2.
+Total gain for subsystem 3:  0.022699095914886516
+Invariance of V<=0.10020484363299323 verified for subsystem 3.
+Total gain for subsystem 4:  0.01976487157889472
+Invariance of V<=0.09123554744468976 verified for subsystem 4.
+Total gain for subsystem 5:  0.0008088837449323825
+Invariance of V<=0.01767680659440885 verified for subsystem 5.
+Total gain for subsystem 6:  0.0011623118562044412
+Invariance of V<=0.041352583795668856 verified for subsystem 6.
+Total gain for subsystem 7:  0.0034871246369720375
+Invariance of V<=0.035142915411746564 verified for subsystem 7.
+Total gain for subsystem 8:  0.015843633959189633
+Invariance of V<=0.10013116918525876 verified for subsystem 8.
+Total gain for subsystem 9:  0.011456920890992452
+Invariance of V<=0.08767706403630995 verified for subsystem 9.
+Total gain for subsystem 10:  0.021073205141267835
+Invariance of V<=0.09215545619305748 verified for subsystem 10.
+Updated level sets for Lyapunov functions after iteration 5: 
+ [0.02 0.06 0.09 0.07 0.02 0.04 0.03 0.10 0.08 0.07]
+Subsystems updated:  [True, True, True, True, True, True, True, True, True, True]
+Total gain for subsystem 1:  0.0005308737535683797
+Invariance of V<=0.02077894959142512 verified for subsystem 1.
+Total gain for subsystem 2:  0.006764674628267828
+Invariance of V<=0.06491075871742767 verified for subsystem 2.
+Total gain for subsystem 3:  0.017350518075300646
+Invariance of V<=0.09218062763894494 verified for subsystem 3.
+Total gain for subsystem 4:  0.012784374679227566
+Invariance of V<=0.06753568844050277 verified for subsystem 4.
+Total gain for subsystem 5:  0.0006909318315807667
+Invariance of V<=0.015467205770107743 verified for subsystem 5.
+Total gain for subsystem 6:  0.0010871481554956305
+Invariance of V<=0.0405449161434097 verified for subsystem 6.
+Total gain for subsystem 7:  0.002686834045695742
+Invariance of V<=0.03033821994529684 verified for subsystem 7.
+Total gain for subsystem 8:  0.014901829273051417
+Invariance of V<=0.09866440401164658 verified for subsystem 8.
+Total gain for subsystem 9:  0.010909851773629659
+Invariance of V<=0.08493715578517527 verified for subsystem 9.
+Total gain for subsystem 10:  0.013851250094217157
+Invariance of V<=0.07181645902544909 verified for subsystem 10.
+Updated level sets for Lyapunov functions after iteration 6: 
+ [0.02 0.06 0.09 0.05 0.02 0.04 0.03 0.10 0.08 0.06]
+Subsystems updated:  [True, True, True, True, True, True, True, True, True, True]
+Total gain for subsystem 1:  0.000527118837996174
+Total gain for subsystem 2:  0.006614273296520189
+Invariance of V<=0.06453042224056774 verified for subsystem 2.
+Total gain for subsystem 3:  0.014014513603420525
+Invariance of V<=0.0859692376906176 verified for subsystem 3.
+Total gain for subsystem 4:  0.008316993745005916
+Invariance of V<=0.05051986068889172 verified for subsystem 4.
+Total gain for subsystem 5:  0.000610598617643101
+Invariance of V<=0.015104693134870843 verified for subsystem 5.
+Total gain for subsystem 6:  0.0010822990248998052
+Invariance of V<=0.04006978040735412 verified for subsystem 6.
+Total gain for subsystem 7:  0.0024261718054330093
+Invariance of V<=0.028027300847901185 verified for subsystem 7.
+Total gain for subsystem 8:  0.014356678563302718
+Invariance of V<=0.09779723639826297 verified for subsystem 8.
+Total gain for subsystem 9:  0.01072580882393398
+Invariance of V<=0.08385885204962129 verified for subsystem 9.
+Total gain for subsystem 10:  0.010129682865477399
+Invariance of V<=0.05898207230508074 verified for subsystem 10.
+Updated level sets for Lyapunov functions after iteration 7: 
+ [0.02 0.06 0.08 0.04 0.01 0.04 0.03 0.10 0.08 0.05]
+Subsystems updated:  [False, True, True, True, True, True, True, True, True, True]
+Successful! Verified reachable level sets contained in target set after iteration 7. 
+
+Time taken for successfully verifying reachability: 6864.661606311798 seconds.
+
+Testing scale factor for reachability:  0.2734375
+Initial level sets for neural Lyapunov functions:, 
+ [0.22 0.19 0.19 0.20 0.25 0.24 0.25 0.17 0.20 0.18]
+Target level set: 
+ [0.14773925781250002, 0.0862451171875, 0.08796997070312498, 0.11592773437500001, 0.23393066406250002, 0.23247436523437498, 0.29537231445312495, 0.097769775390625, 0.1169140625, 0.11630126953125001]
+Verifying reachability using neural Lyapunov functions...
+Total gain for subsystem 1:  0.02635256043667056
+Invariance of V<=0.21601562500000002 verified for subsystem 1.
+Total gain for subsystem 2:  0.06431950250236772
+Invariance of V<=0.1859375 verified for subsystem 2.
+Total gain for subsystem 3:  0.07730129385421854
+Invariance of V<=0.19414062499999998 verified for subsystem 3.
+Total gain for subsystem 4:  0.06846824843193042
+Invariance of V<=0.196875 verified for subsystem 4.
+Total gain for subsystem 5:  0.042149996187854435
+Invariance of V<=0.2515625 verified for subsystem 5.
+Total gain for subsystem 6:  0.017293203847615544
+Invariance of V<=0.237890625 verified for subsystem 6.
+Total gain for subsystem 7:  0.0535908752907132
+Invariance of V<=0.248828125 verified for subsystem 7.
+Total gain for subsystem 8:  0.046420139636719024
+Invariance of V<=0.16679687499999998 verified for subsystem 8.
+Total gain for subsystem 9:  0.04940157934749979
+Invariance of V<=0.199609375 verified for subsystem 9.
+Total gain for subsystem 10:  0.0790129200334918
+!!!Invariance cannot be verified for subsystem 10 at initial step!!!
+ 
+Scaling factor for which reachability is verified:  0.265625
+Level sets verified for reachability:  [0.21 0.18 0.19 0.19 0.24 0.23 0.24 0.16 0.19 0.18]
+Time taken for verifying reachability using neural Lyapunov functions: 18304.13047504425 seconds.
+
+Architecture:        x86_64
+CPU op-mode(s):      32-bit, 64-bit
+Byte Order:          Little Endian
+Address sizes:       46 bits physical, 48 bits virtual
+CPU(s):              44
+On-line CPU(s) list: 0-43
+Thread(s) per core:  1
+Core(s) per socket:  22
+Socket(s):           2
+NUMA node(s):        2
+Vendor ID:           GenuineIntel
+CPU family:          6
+Model:               85
+Model name:          Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz
+Stepping:            7
+CPU MHz:             2100.000
+BogoMIPS:            4200.00
+Virtualization:      VT-x
+L1d cache:           32K
+L1i cache:           32K
+L2 cache:            1024K
+L3 cache:            30976K
+NUMA node0 CPU(s):   0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42
+NUMA node1 CPU(s):   1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43
+Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin ssbd mba rsb_ctxsw ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke avx512_vnni md_clear spec_ctrl intel_stibp flush_l1d arch_capabilities
